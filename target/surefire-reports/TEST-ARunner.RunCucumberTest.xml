@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ARunner.RunCucumberTest" time="377.586" tests="19" errors="6" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/ranajitchowdhury/eclipse-workspace/Mct_Automation_Framework/target/test-classes:/Users/ranajitchowdhury/eclipse-workspace/Mct_Automation_Framework/target/classes:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-java/6.11.0/cucumber-java-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-core/6.11.0/cucumber-core-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-gherkin/6.11.0/cucumber-gherkin-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.11.0/cucumber-gherkin-messages-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/messages/15.0.0/messages-15.0.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/tag-expressions/3.0.1/tag-expressions-3.0.1.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-plugin/6.11.0/cucumber-plugin-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/docstring/6.11.0/docstring-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/html-formatter/13.0.0/html-formatter-13.0.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/create-meta/4.0.0/create-meta-4.0.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-java/4.31.0/selenium-java-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-api/4.31.0/selenium-api-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.31.0/selenium-chrome-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.31.0/selenium-chromium-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-json/4.31.0/selenium-json-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.31.0/selenium-manager-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v133/4.31.0/selenium-devtools-v133-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v134/4.31.0/selenium-devtools-v134-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v135/4.31.0/selenium-devtools-v135-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.31.0/selenium-edge-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.31.0/selenium-firefox-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-http/4.31.0/selenium-http-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.31.0/selenium-ie-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.31.0/selenium-remote-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/guava/guava/33.4.6-jre/guava-33.4.6-jre.jar:/Users/ranajitchowdhury/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/Users/ranajitchowdhury/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/ranajitchowdhury/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-api/1.48.0/opentelemetry-api-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-context/1.48.0/opentelemetry-context-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.48.0/opentelemetry-exporter-logging-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.48.0/opentelemetry-sdk-common-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.48.0/opentelemetry-sdk-extension-autoconfigure-spi-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.48.0/opentelemetry-sdk-extension-autoconfigure-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.48.0/opentelemetry-sdk-trace-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.48.0/opentelemetry-sdk-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.48.0/opentelemetry-sdk-metrics-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.48.0/opentelemetry-sdk-logs-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/net/bytebuddy/byte-buddy/1.17.5/byte-buddy-1.17.5.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-os/4.31.0/selenium-os-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.31.0/selenium-safari-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-support/4.31.0/selenium-support-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-junit/6.11.0/cucumber-junit-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/ranajitchowdhury/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-picocontainer/6.11.0/cucumber-picocontainer-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/Users/ranajitchowdhury/.m2/repository/io/github/bonigarcia/webdrivermanager/4.4.3/webdrivermanager-4.4.3.jar:/Users/ranajitchowdhury/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/ranajitchowdhury/.m2/repository/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.0.3/httpclient5-5.0.3.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.0.2/httpcore5-5.0.2.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.0.2/httpcore5-h2-5.0.2.jar:/Users/ranajitchowdhury/.m2/repository/commons-codec/commons-codec/1.13/commons-codec-1.13.jar:/Users/ranajitchowdhury/.m2/repository/org/rauschig/jarchivelib/1.1.0/jarchivelib-1.1.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar:/Users/ranajitchowdhury/.m2/repository/org/jsoup/jsoup/1.13.1/jsoup-1.13.1.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-webapp/9.2.0.M0/jetty-webapp-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-xml/9.2.0.M0/jetty-xml-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-util/9.2.0.M0/jetty-util-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-servlet/9.2.0.M0/jetty-servlet-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-security/9.2.0.M0/jetty-security-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-server/9.2.0.M0/jetty-server-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-http/9.2.0.M0/jetty-http-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-io/9.2.0.M0/jetty-io-9.2.0.M0.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Users/ranajitchowdhury/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_21.0.7.v20250502-0916/jre/lib"/>
+    <property name="sun.java.command" value="/Users/ranajitchowdhury/eclipse-workspace/Mct_Automation_Framework/target/surefire/surefirebooter15913955935769448689.jar /Users/ranajitchowdhury/eclipse-workspace/Mct_Automation_Framework/target/surefire 2026-04-10T22-24-30_050-jvmRun1 surefire16968417564198205335tmp surefire_06185024992420390558tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/ranajitchowdhury/eclipse-workspace/Mct_Automation_Framework/target/test-classes:/Users/ranajitchowdhury/eclipse-workspace/Mct_Automation_Framework/target/classes:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-java/6.11.0/cucumber-java-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-core/6.11.0/cucumber-core-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-gherkin/6.11.0/cucumber-gherkin-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.11.0/cucumber-gherkin-messages-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/messages/15.0.0/messages-15.0.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/tag-expressions/3.0.1/tag-expressions-3.0.1.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-plugin/6.11.0/cucumber-plugin-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/docstring/6.11.0/docstring-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/html-formatter/13.0.0/html-formatter-13.0.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/create-meta/4.0.0/create-meta-4.0.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-java/4.31.0/selenium-java-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-api/4.31.0/selenium-api-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.31.0/selenium-chrome-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.31.0/selenium-chromium-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-json/4.31.0/selenium-json-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.31.0/selenium-manager-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v133/4.31.0/selenium-devtools-v133-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v134/4.31.0/selenium-devtools-v134-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v135/4.31.0/selenium-devtools-v135-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.31.0/selenium-edge-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.31.0/selenium-firefox-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-http/4.31.0/selenium-http-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.31.0/selenium-ie-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.31.0/selenium-remote-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/guava/guava/33.4.6-jre/guava-33.4.6-jre.jar:/Users/ranajitchowdhury/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/Users/ranajitchowdhury/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/ranajitchowdhury/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-api/1.48.0/opentelemetry-api-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-context/1.48.0/opentelemetry-context-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.48.0/opentelemetry-exporter-logging-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.48.0/opentelemetry-sdk-common-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.48.0/opentelemetry-sdk-extension-autoconfigure-spi-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.48.0/opentelemetry-sdk-extension-autoconfigure-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.48.0/opentelemetry-sdk-trace-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.48.0/opentelemetry-sdk-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.48.0/opentelemetry-sdk-metrics-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.48.0/opentelemetry-sdk-logs-1.48.0.jar:/Users/ranajitchowdhury/.m2/repository/net/bytebuddy/byte-buddy/1.17.5/byte-buddy-1.17.5.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-os/4.31.0/selenium-os-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.31.0/selenium-safari-driver-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/org/seleniumhq/selenium/selenium-support/4.31.0/selenium-support-4.31.0.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-junit/6.11.0/cucumber-junit-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/ranajitchowdhury/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/ranajitchowdhury/.m2/repository/io/cucumber/cucumber-picocontainer/6.11.0/cucumber-picocontainer-6.11.0.jar:/Users/ranajitchowdhury/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/Users/ranajitchowdhury/.m2/repository/io/github/bonigarcia/webdrivermanager/4.4.3/webdrivermanager-4.4.3.jar:/Users/ranajitchowdhury/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/ranajitchowdhury/.m2/repository/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar:/Users/ranajitchowdhury/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.0.3/httpclient5-5.0.3.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.0.2/httpcore5-5.0.2.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.0.2/httpcore5-h2-5.0.2.jar:/Users/ranajitchowdhury/.m2/repository/commons-codec/commons-codec/1.13/commons-codec-1.13.jar:/Users/ranajitchowdhury/.m2/repository/org/rauschig/jarchivelib/1.1.0/jarchivelib-1.1.0.jar:/Users/ranajitchowdhury/.m2/repository/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar:/Users/ranajitchowdhury/.m2/repository/org/jsoup/jsoup/1.13.1/jsoup-1.13.1.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-webapp/9.2.0.M0/jetty-webapp-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-xml/9.2.0.M0/jetty-xml-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-util/9.2.0.M0/jetty-util-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-servlet/9.2.0.M0/jetty-servlet-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-security/9.2.0.M0/jetty-security-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-server/9.2.0.M0/jetty-server-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-http/9.2.0.M0/jetty-http-9.2.0.M0.jar:/Users/ranajitchowdhury/.m2/repository/org/eclipse/jetty/jetty-io/9.2.0.M0/jetty-io-9.2.0.M0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/ranajitchowdhury"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="/Users/ranajitchowdhury/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_21.0.7.v20250502-0916/jre"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/ranajitchowdhury/eclipse-workspace/Mct_Automation_Framework"/>
+    <property name="style.color" value="always"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/ranajitchowdhury/eclipse-workspace/Mct_Automation_Framework/target/surefire/surefirebooter15913955935769448689.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="21.0.7+6-LTS"/>
+    <property name="user.name" value="ranajitchowdhury"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.3.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.7+6"/>
+    <property name="localRepository" value="/Users/ranajitchowdhury/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/53/wqhwmn8n7l7fgbk_1c70l0jw0000gn/T/"/>
+    <property name="java.version" value="21.0.7"/>
+    <property name="user.dir" value="/Users/ranajitchowdhury/eclipse-workspace/Mct_Automation_Framework"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/ranajitchowdhury/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.7+6-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="Successfull Login as a User" classname="Login Mechanism Test scearios" time="35.03"/>
+  <testcase name="Login with Invalid ID" classname="Login Mechanism Test scearios" time="24.751"/>
+  <testcase name="Blank user name Entry Error Show Up" classname="Login Mechanism Test scearios" time="27.621"/>
+  <testcase name="Blank Password Entry Error Show Up" classname="Login Mechanism Test scearios" time="27.457"/>
+  <testcase name="Successfull Login &amp; log out of a New User" classname="Login Mechanism Test scearios" time="24.903">
+    <error message="Keys to send should be a not null CharSequence" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+</error>
+    <system-out><![CDATA[
+Scenario: Successfull Login & log out of a New User                                              # src/test/resources/1_Login.feature:33
+  Given I Open my computers "chrome" browser                                                     # stepdefinationcode.CommonSteps.i_open_my_computers_browser(java.lang.String)
+  And I browse to mct website using url "https://www.demo.iscripts.com/multicart/demo/index.php" # stepdefinationcode.CommonSteps.i_browse_to_website(java.lang.String)
+  And I click on login link                                                                      # stepdefinationcode.CommonPageActions.i_click_on_login_link()
+  And I click on signup button                                                                   # stepdefinationcode.CommonPageActions.i_click_on_signup_button()
+  When I complete the registration form for a new "userxy004"                                    # stepdefinationcode.DomainSteps.i_complete_the_registration_form(java.lang.String)
+      java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at pageobjectmodel.PageParent.enterValueOnWebElement(PageParent.java:52)
+	at pageobjectmodel.RegistrationPage.completeREgistrationWithUser(RegistrationPage.java:47)
+	at stepdefinationcode.DomainSteps.i_complete_the_registration_form(DomainSteps.java:20)
+	at ✽.I complete the registration form for a new "userxy004"(file:///Users/ranajitchowdhury/eclipse-workspace/Mct_Automation_Framework/src/test/resources/1_Login.feature:35)
+
+  Then I expect my profile name text as "Mr Auto userxy004"                                      # stepdefinationcode.AllValidationSteps.i_expect_my_profile_name_text(java.lang.String)
+  And I logout for the user                                                                      # stepdefinationcode.CommonPageActions.i_log_Out()
+
+    Embedding screenShots [image/png 97382 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Apr 10, 2026 10:26:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 10, 2026 10:26:33 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 147.0.7727.55. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.31.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="Forgot Password Reover" classname="Login Mechanism Test scearios" time="29.312">
+    <failure message="Failed to Find Correct Profile Name!! expected:&lt;[please correct the following errors to continue!&#10;* this email has not been registered!]&gt; but was:&lt;[a error ]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: 
+Failed to Find Correct Profile Name!! expected:<[please correct the following errors to continue!
+* this email has not been registered!]> but was:<[a error ]>
+]]></failure>
+    <system-out><![CDATA[
+Scenario: Forgot Password Reover                                                                 # src/test/resources/1_Login.feature:40
+  Given I Open my computers "chrome" browser                                                     # stepdefinationcode.CommonSteps.i_open_my_computers_browser(java.lang.String)
+  And I browse to mct website using url "https://www.demo.iscripts.com/multicart/demo/index.php" # stepdefinationcode.CommonSteps.i_browse_to_website(java.lang.String)
+  And I click on login link                                                                      # stepdefinationcode.CommonPageActions.i_click_on_login_link()
+  And I click on forgotpassword link                                                             # stepdefinationcode.CommonPageActions.iClickOnForgotpasswordLink()
+  And I enter regemail as "abc@aa.bb"                                                            # stepdefinationcode.CommonPageActions.iEnterRegemailAs(java.lang.String)
+  When I click on reset password button                                                          # stepdefinationcode.CommonPageActions.iClickOnResetPasswordButton()
+  Then I validate a error text as "a error "                                                     # stepdefinationcode.AllValidationSteps.iValidateAErrorTextAs(java.lang.String)
+      org.junit.ComparisonFailure: Failed to Find Correct Profile Name!! expected:<[please correct the following errors to continue!
+* this email has not been registered!]> but was:<[a error ]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at stepdefinationcode.AllValidationSteps.iValidateAErrorTextAs(AllValidationSteps.java:125)
+	at ✽.I validate a error text as "a error "(file:///Users/ranajitchowdhury/eclipse-workspace/Mct_Automation_Framework/src/test/resources/1_Login.feature:44)
+
+
+    Embedding screenShots [image/png 87392 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Apr 10, 2026 10:26:58 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 10, 2026 10:26:58 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 147.0.7727.55. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.31.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="Successfull creation of new User" classname="Create Account Mechanism Test scearios" time="34.747">
+    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//textarea[@name=&apos;custom_field_1&apos;]&quot;}&#10;  (Session info: chrome=147.0.7727.55)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;21.0.7&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [f4612fa703a10333323f12140201f7c5, findElement {value=//textarea[@name=&apos;custom_field_1&apos;], using=xpath}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.55, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: /var/folders/53/wqhwmn8n7l7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51654}, goog:processID: 89275, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51654/devtoo..., se:cdpVersion: 147.0.7727.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: f4612fa703a10333323f12140201f7c5" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//textarea[@name='custom_field_1']"}
+  (Session info: chrome=147.0.7727.55)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '26.3.1', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4612fa703a10333323f12140201f7c5, findElement {value=//textarea[@name='custom_field_1'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.55, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: /var/folders/53/wqhwmn8n7l7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51654}, goog:processID: 89275, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51654/devtoo..., se:cdpVersion: 147.0.7727.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4612fa703a10333323f12140201f7c5
+</error>
+    <system-out><![CDATA[
+Scenario: Successfull creation of new User                                                       # src/test/resources/2_CreateAccount.feature:8
+  Given I Open my computers "chrome" browser                                                     # stepdefinationcode.CommonSteps.i_open_my_computers_browser(java.lang.String)
+  And I browse to mct website using url "https://www.demo.iscripts.com/multicart/demo/index.php" # stepdefinationcode.CommonSteps.i_browse_to_website(java.lang.String)
+  And I click on login link                                                                      # stepdefinationcode.CommonPageActions.i_click_on_login_link()
+  And I click on signup button                                                                   # stepdefinationcode.CommonPageActions.i_click_on_signup_button()
+  When I complete the registration form for a new "generateNew"                                  # stepdefinationcode.DomainSteps.i_complete_the_registration_form(java.lang.String)
+      org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea[@name='custom_field_1']"}
+  (Session info: chrome=147.0.7727.55)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '26.3.1', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4612fa703a10333323f12140201f7c5, findElement {value=//textarea[@name='custom_field_1'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.55, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: /var/folders/53/wqhwmn8n7l7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51654}, goog:processID: 89275, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51654/devtoo..., se:cdpVersion: 147.0.7727.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4612fa703a10333323f12140201f7c5
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at pageobjectmodel.PageParent.enterValueOnWebElementByxpath(PageParent.java:63)
+	at pageobjectmodel.RegistrationPage.completeREgistrationWithUser(RegistrationPage.java:53)
+	at stepdefinationcode.DomainSteps.i_complete_the_registration_form(DomainSteps.java:20)
+	at ✽.I complete the registration form for a new "generateNew"(file:///Users/ranajitchowdhury/eclipse-workspace/Mct_Automation_Framework/src/test/resources/2_CreateAccount.feature:10)
+
+  Then I expect my profile name text as "Mr Auto generateNew"                                    # stepdefinationcode.AllValidationSteps.i_expect_my_profile_name_text(java.lang.String)
+
+    Embedding screenShots [image/png 82158 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Apr 10, 2026 10:27:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 10, 2026 10:27:27 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 147.0.7727.55. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.31.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="Error on Existing User Registration." classname="Create Account Mechanism Test scearios" time="24.2">
+    <error message="Keys to send should be a not null CharSequence" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+</error>
+    <system-out><![CDATA[
+Scenario: Error on Existing User Registration.                                                                                                                                                           # src/test/resources/2_CreateAccount.feature:13
+  Given I Open my computers "chrome" browser                                                                                                                                                             # stepdefinationcode.CommonSteps.i_open_my_computers_browser(java.lang.String)
+  And I browse to mct website using url "https://www.demo.iscripts.com/multicart/demo/index.php"                                                                                                         # stepdefinationcode.CommonSteps.i_browse_to_website(java.lang.String)
+  And I click on login link                                                                                                                                                                              # stepdefinationcode.CommonPageActions.i_click_on_login_link()
+  And I click on signup button                                                                                                                                                                           # stepdefinationcode.CommonPageActions.i_click_on_signup_button()
+  When I complete the registration form for a new "user008"                                                                                                                                              # stepdefinationcode.DomainSteps.i_complete_the_registration_form(java.lang.String)
+      java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at pageobjectmodel.PageParent.enterValueOnWebElement(PageParent.java:52)
+	at pageobjectmodel.RegistrationPage.completeREgistrationWithUser(RegistrationPage.java:47)
+	at stepdefinationcode.DomainSteps.i_complete_the_registration_form(DomainSteps.java:20)
+	at ✽.I complete the registration form for a new "user008"(file:///Users/ranajitchowdhury/eclipse-workspace/Mct_Automation_Framework/src/test/resources/2_CreateAccount.feature:15)
+
+  Then I expect existing reg error name text as "Please correct the following errors to continue!* User Name already exists!* The email address is already in use!.Terms & Conditions cannot be empty !" # stepdefinationcode.AllValidationSteps.validateExistRegregError(java.lang.String)
+
+    Embedding screenShots [image/png 97382 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Apr 10, 2026 10:28:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 10, 2026 10:28:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 147.0.7727.55. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.31.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="User see all my Account Options" classname="My Account Test scearios" time="32.977"/>
+  <testcase name="User see all Get to Know us Footer Links" classname="My Account Test scearios" time="14.538">
+    <error message="The step &apos;I validate all Page Footer Get to know us links are like below&apos; is undefined.&#10;You can implement this step using the snippet(s) below:&#10;&#10;@Then(&quot;I validate all Page Footer Get to know us links are like below&quot;)&#10;public void iValidateAllPageFooterGetToKnowUsLinksAreLikeBelow(io.cucumber.datatable.DataTable dataTable) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    // For automatic transformation, change DataTable to one of&#10;    // E, List&lt;E&gt;, List&lt;List&lt;E&gt;&gt;, List&lt;Map&lt;K,V&gt;&gt;, Map&lt;K,V&gt; or&#10;    // Map&lt;K, List&lt;V&gt;&gt;. E,K,V must be a String, Integer, Float,&#10;    // Double, Byte, Short, Long, BigInteger or BigDecimal.&#10;    //&#10;    // For other transformations you can register a DataTableType.&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException"><![CDATA[io.cucumber.junit.UndefinedStepException: 
+The step 'I validate all Page Footer Get to know us links are like below' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("I validate all Page Footer Get to know us links are like below")
+public void iValidateAllPageFooterGetToKnowUsLinksAreLikeBelow(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+Scenario: User see all Get to Know us Footer Links                                               # src/test/resources/3_Myaccount.feature:37
+  Given I Open my computers "chrome" browser                                                     # stepdefinationcode.CommonSteps.i_open_my_computers_browser(java.lang.String)
+  And I browse to mct website using url "https://www.demo.iscripts.com/multicart/demo/index.php" # stepdefinationcode.CommonSteps.i_browse_to_website(java.lang.String)
+  Then I validate all Page Footer Get to know us links are like below                            # null
+]]></system-out>
+    <system-err><![CDATA[Apr 10, 2026 10:28:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+Apr 10, 2026 10:28:59 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 147.0.7727.55. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.31.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="Successfull login to Internet Page secure area" classname="Login Feature Of the Internet Page" time="15.766"/>
+  <testcase name="Error login to Internet Page secure area" classname="Login Feature Of the Internet Page" time="15.571"/>
+  <testcase name="Error Black Password Filed" classname="Login Feature Of the Internet Page" time="15.43"/>
+  <testcase name="Loading Three Dynamic Timed Element" classname="Wait time learnig" time="15.072"/>
+  <testcase name="web page Alert Handeling" classname="Alert" time="9.343"/>
+  <testcase name="Working With Frame" classname="Selenium Frame Switch Learning" time="19.263"/>
+  <testcase name="Working With Multiple WIndow" classname="Selenium Multiple Window" time="10.769"/>
+  <testcase name="THis a demo sceario" classname="sample by Student 3" time="0.037">
+    <error message="The step &apos;I&apos; and 3 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@Given(&quot;I&quot;)&#10;public void i() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;I&quot;)&#10;public void i() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;I&quot;)&#10;public void i() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: 
+The step 'I' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("I")
+public void i() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I")
+public void i() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("I")
+public void i() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out><![CDATA[
+Scenario: THis a demo sceario # src/test/resources/9_studenteNewFile.feature:3
+  Given I                     # null
+  When I                      # null
+  Then I                      # null
+  But I                       # null
+      java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "stepdefinationcode.A1StepCodeHelper.getBrowser().driver" is null
+	at stepdefinationcode.HookStepCode.tearDown(HookStepCode.java:32)
+
+]]></system-out>
+  </testcase>
+  <testcase name="THis a demo sceario" classname="sample by Student 3" time="0.038">
+    <error message="Cannot invoke &quot;org.openqa.selenium.WebDriver.close()&quot; because &quot;stepdefinationcode.A1StepCodeHelper.getBrowser().driver&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "stepdefinationcode.A1StepCodeHelper.getBrowser().driver" is null
+</error>
+  </testcase>
+</testsuite>

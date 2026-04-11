@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://the-internet.herokuapp.com/dynamic_loading/2 -->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script src="./The Internet_files/298279967.js"></script>
+
+  <meta name="viewport" content="width=device-width">
+  <title>The Internet</title>
+  <link href="./The Internet_files/app.css" rel="stylesheet">
+  <link href="./The Internet_files/font-awesome.css" rel="stylesheet">
+  <script src="./The Internet_files/jquery-1.11.3.min.js"></script>
+  <script src="./The Internet_files/jquery-ui.js"></script>
+  <script src="./The Internet_files/foundation.js"></script>
+  <meta class="foundation-mq-small">
+  <meta class="foundation-mq-medium">
+  <meta class="foundation-mq-large">
+  <style></style>
+  <script src="./The Internet_files/foundation.alerts.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</head>
+
+<body style="zoom: 1;">
+  <div class="row">
+    <div id="flash-messages" class="large-12 columns">
+
+    </div>
+  </div>
+
+  <!-- ######## First loadButton Button -->
+  <div class="row">
+    <div id="content" class="large-12 columns">
+      <script>
+        $(function () {
+          $('#loadButton1 button').click(function () {
+            $('#loadButton1').hide();
+            $('#loadButton1').before("<div id='loading'>Loading... <img src='./img/ajax-loader.gif'></div>");
+            setTimeout(function () {
+              $('#loading').hide();
+              $('#loading').before("<div id='finish' style='display:none'><h4>Hello World!</h4></div>")
+              $('#finish').show();
+            }, 1000);
+          });
+        });
+      </script>
+      <div class="example">
+        <h3>Dynamically Loaded Page Elements</h3>
+        <h4>Example 2: Element rendered after the fact</h4>
+        <br>
+        <div id="loadButton1">
+          <button>Load Element 1</button>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ######## 2nd loadButton Button -->
+  <div class="row">
+    <!-- // ==> ID = "content2" (Second Content ) -->
+    <div id="content2" class="large-12 columns">
+      <script>
+        $(function () {
+          $('#loadButton2 button').click(function () {
+            $('#loadButton2').hide();
+            $('#loadButton2').before("<div id='loading2'>Loading... <img src='./img/ajax-loader.gif'></div>");
+            setTimeout(function () {
+              $('#loading2').hide();
+              $('#loading2').before("<div id='finish2' style='display:none'><h4>Hello World2!</h4></div>")
+              $('#finish2').show();
+            }, 2000);
+          });
+        });
+      </script>
+
+      <div class="example">
+        <br>
+        <div id="loadButton2">
+          <button>Load Element 2</button>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <!-- ######## 3rd Element Loader Button -->
+  <div class="row">
+    <!-- // ==> ID = "content2" (Second Content ) -->
+    <div id="content3" class="large-12 columns">
+      <script>
+        $(function () {
+          $('#loadButton3 button').click(function () {
+            $('#loadButton3').hide();
+            $('#loadButton3').before("<div id='loading3'>Loading... <img src='./img/ajax-loader.gif'></div>");
+            setTimeout(function () {
+              $('#loading3').hide();
+              $('#loading3').before("<div id='finish3' style='display:none'><h4>Hello World3!</h4></div>")
+              $('#finish3').show();
+            }, 3000);
+          });
+        });
+      </script>
+
+      <div class="example">
+        <br>
+        <div id="loadButton3">
+          <button>Load Element 3</button>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ######## 4th Element Loader Button -->
+  <div class="row">
+    <!-- // ==> ID = "content2" (Second Content ) -->
+    <div id="content4" class="large-12 columns">
+      <script>
+        $(function () {
+          $('#loadButton4 button').click(function () {
+            $('#loadButton4').hide();
+            $('#loadButton4').before("<div id='loading4'>Loading... <img src='./img/ajax-loader.gif'></div>");
+
+            //$("#p").text("Baal world!");
+
+            var rand = Math.floor(Math.random() * 4000) + 1000;
+            setTimeout(function () {
+              $('#loading4').hide();
+              $('#loading4').before("<div id='finish4' style='display:none'><h4>Hello World4!</h4></div>")
+              $('#finish4').show();
+              console.log("Random Number :" + rand)
+            }, rand);
+
+            $('#loadButton4').after(`<div id='ElementLoadTIme'> Element Load Time : ${rand}  milisecond</div>`);
+
+          });
+        });
+      </script>
+
+      <div class="example">
+        <br>
+        <div id="loadButton4">
+          <button>Load Element 4</button>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="page-footer" class="row">
+    <div class="large-4 large-centered columns">
+      <hr>
+      <div style="text-align: center;">Powered by <a target="_blank" href="http://elementalselenium.com/">Elemental
+          Selenium</a></div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
