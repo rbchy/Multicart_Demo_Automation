@@ -19,6 +19,7 @@ public class RegistrationPage extends PageParent {
 	String firstNameField = "txtFirstName";
 	String lastNameField = "txtLastName";
 	String termsAndCondField = "//textarea[@name='custom_field_1']";
+	String addressField = "//input[@name='custom_field_2']";   //// "Address *" — required since the site update
 	String checkNewscheckBox = "check_news";
 	String registerButton = "btnRegister";
 
@@ -49,6 +50,9 @@ public class RegistrationPage extends PageParent {
 		enterValueOnWebElement(confPasswordField, "Password");
 		enterValueOnWebElement(firstNameField, "MR Auto");
 		enterValueOnWebElement(lastNameField, testUserName);
+		if (!driverforParentPage.findElements(By.xpath(addressField)).isEmpty()) {
+			enterValueOnWebElementByxpath(addressField, "100 Test Street, Philadelphia, PA");
+		}
 		//// The Terms & Conditions box is not on every version of the form
 		if (!driverforParentPage.findElements(By.xpath(termsAndCondField)).isEmpty()) {
 			enterValueOnWebElementByxpath(termsAndCondField, "Terms Sample ...");

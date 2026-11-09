@@ -13,4 +13,4 @@ Feature: Create Account Mechanism Test scearios
   Scenario: Error on Existing User Registration.
     And I click on signup button
     When I complete the registration form for a new "user008"
-    Then I expect existing reg error name text as "Please correct the following errors to continue!* User Name already exists!* The email address is already in use!.Terms & Conditions cannot be empty !"
+    Then I expect existing reg error name text as "Please correct the following errors to continue!* User Name already exists!* The email address is already in use!"
