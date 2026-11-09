@@ -32,13 +32,13 @@ Feature: Login Mechanism Test scearios
 
   Scenario: Successfull Login & log out of a New User
     And I click on signup button
-    When I complete the registration form for a new "userxy004"
-    Then I expect my profile name text as "Mr Auto userxy004"
+    When I complete the registration form for a new "generateNew"
+    Then I expect my profile name text as "Mr Auto generateNew"
     And I logout for the user
 
  
-  Scenario: Forgot Password Reover
+  Scenario: Forgot Password with an unregistered e-mail
     And I click on forgotpassword link
     And I enter regemail as "abc@aa.bb"
     When I click on reset password button
-    Then I validate a error text as "a error "
+    Then I validate a error text as "Please correct the following errors to continue! * This email has not been registered!"

@@ -121,8 +121,8 @@ public class AllValidationSteps {
 
 	@Then("I validate a error text as {string}")
 	public void iValidateAErrorTextAs(String expError) {
-		String actualerror = helper.getHomePage().getForgotPassError();
-		Assert.assertEquals("Failed to Find Correct Profile Name!!", actualerror, expError.toLowerCase());
+		String actualerror = helper.getHomePage().getForgotPassError().replaceAll("\\s+", " ").trim();
+		Assert.assertEquals("Failed to find the forgot-password error!!", expError.toLowerCase().replaceAll("\\s+", " ").trim(), actualerror);
 	}
 
 	@Then("I expect existing reg error name text as {string}")
@@ -143,6 +143,21 @@ public class AllValidationSteps {
 		/// Conditions cannot be empty !";
 
 		Assert.assertEquals("Failed to get correct Error", actualerror.toLowerCase(), expectedError.toLowerCase());
+	}
+
+
+	@Then("I validate all Page Footer Get to know us links are like below")
+	public void iValidateAllPageFooterGetToKnowUsLinks(io.cucumber.datatable.DataTable dataTable) {
+		java.util.List<String> expected = dataTable.asList();
+		java.util.List<String> actual = new java.util.ArrayList<>();
+		for (org.openqa.selenium.WebElement link : helper.getBrowser().driver
+				.findElements(By.xpath("//h1[contains(text(),'Get to know us')]/..//a"))) {
+			String text = link.getAttribute("textContent").trim();
+			if (!text.isEmpty()) {
+				actual.add(text);
+			}
+		}
+		Assert.assertEquals("Footer 'Get to know us' links", expected, actual);
 	}
 
 }

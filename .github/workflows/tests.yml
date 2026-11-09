@@ -22,6 +22,20 @@ jobs:
           cache: maven
       - name: Run all scenarios
         run: mvn -B --no-transfer-progress clean test -Dheadless=true
+      - name: Summarise failure pages
+        if: failure()
+        run: |
+          python3 - <<'EOF'
+          import glob, re, html
+          for f in sorted(glob.glob('target/failures/*.html')):
+              s = open(f, encoding='utf-8', errors='ignore').read()
+              print('=' * 25, f, s.splitlines()[0])
+              for pat in [r'<[^>]*id="dLabel[^"]*"[^>]*>', r'<[^>]*class="[^"]*(?:error|errormsg|text_information)[^"]*"[^>]*>[^<]{0,200}',
+                          r'<(?:input|textarea|select)\b[^>]*>', r'<a\b[^>]*>(?:My Account|Logout|My Orders)[^<]*']:
+                  for m in list(dict.fromkeys(re.findall(pat, s)))[:15]:
+                      print('  ', re.sub(r'\s+', ' ', html.unescape(m))[:230])
+          EOF
+
       - name: Upload Cucumber report
         if: always()
         uses: actions/upload-artifact@v4
