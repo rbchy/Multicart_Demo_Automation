@@ -1,38 +1,117 @@
-# Multicart Demo Automation — Java + Selenium + Cucumber + TestNG
+<div align="center">
 
-![Java](https://img.shields.io/badge/Java-8+-orange?logo=java)
-![Selenium](https://img.shields.io/badge/Selenium-WebDriver-43B02A?logo=selenium)
-![Cucumber](https://img.shields.io/badge/Cucumber-BDD-brightgreen?logo=cucumber)
-![TestNG](https://img.shields.io/badge/TestNG-Runner-red)
-![Maven](https://img.shields.io/badge/Maven-Build-C71A36?logo=apache-maven)
-![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-D24939?logo=jenkins)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+# 🛒 Multicart Demo Automation
 
-**Author:** Ranajit Baran Chowdhury — Software Programmer & QA Automation Engineer
-**Email:** chyranajit@gmail.com
-**Phone:** +1 (267) 342-5565
-**GitHub:** [@ranajitchowdhury](https://github.com/ranajitchowdhury)
-**Portfolio:** [rbc6543.wixsite.com/rbc-portfolio](https://rbc6543.wixsite.com/rbc-portfolio)
-**LinkedIn:** [linkedin.com/in/ranajitchowdhury](https://linkedin.com/in/ranajitchowdhury)
+### Selenium + Cucumber suite: an e-commerce demo shop plus the classic Selenium challenges — waits, alerts, frames, windows
 
-A comprehensive **BDD test automation framework** for e-commerce multi-cart functionality — built with **Java**, **Selenium WebDriver**, and **Cucumber**. This project demonstrates industry-standard automation engineering practices including Page Object Model, layered architecture, design patterns, and CI/CD-ready structure.
+[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1500&color=FFC107&center=true&vCenter=true&width=900&repeat=true&lines=Java+17+%C2%B7+Selenium+4.31+%C2%B7+Cucumber+%C2%B7+JUnit+%C2%B7+Jetty;Login+%C2%B7+registration+%C2%B7+my+account+%C2%B7+alerts+%C2%B7+frames+%C2%B7+windows;17+%2F+17+scenarios+passing+in+GitHub+Actions)](https://git.io/typing-svg)
 
-🌐 **Application Under Test:** Multi-cart E-commerce Demo System
+<!-- ============ STATUS BAR ============ -->
+[![Tests](https://github.com/rbchy/Multicart_Demo_Automation/actions/workflows/tests.yml/badge.svg)](https://github.com/rbchy/Multicart_Demo_Automation/actions/workflows/tests.yml)
+![Pass Rate](https://img.shields.io/badge/Pass%20Rate-100%25%20(17%2F17)-22c55e?style=for-the-badge&logo=checkmarx&logoColor=white)
+![Targets](https://img.shields.io/badge/Targets-iScripts%20MultiCart%20%C2%B7%20The%20Internet%20%C2%B7%20local%20Jetty-1e3a8a?style=for-the-badge)
+
+![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-4.31-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![Cucumber](https://img.shields.io/badge/Cucumber-6.11-23D96C?style=for-the-badge&logo=cucumber&logoColor=white)
+![JUnit](https://img.shields.io/badge/JUnit-4-25A162?style=for-the-badge&logo=junit5&logoColor=white)
+![PicoContainer](https://img.shields.io/badge/PicoContainer-DI-6d28d9?style=for-the-badge)
+![Jetty](https://img.shields.io/badge/Jetty-local%20pages-FC390E?style=for-the-badge&logo=eclipsejetty&logoColor=white)
+
+![Last Commit](https://img.shields.io/github/last-commit/rbchy/Multicart_Demo_Automation?style=flat-square&color=0d9488&label=Last%20commit)
+![Repo Size](https://img.shields.io/github/repo-size/rbchy/Multicart_Demo_Automation?style=flat-square&color=155e75&label=Repo%20size)
+
+</div>
 
 ---
 
-## 📋 Tech Stack
+## 📌 At a Glance
 
-| Component | Technology | Purpose |
-|-----------|-----------|---------|
-| **Language** | Java 8+ | Core automation logic and OOP design |
-| **Automation Tool** | Selenium WebDriver | Browser UI interaction and control |
-| **BDD Framework** | Cucumber (Gherkin) | Human-readable BDD test scenarios |
-| **Test Runner** | TestNG | Test execution, grouping, and parallel support |
-| **Build Tool** | Maven | Dependency management and lifecycle |
-| **IDE** | Eclipse / IntelliJ IDEA | Development environment |
-| **CI/CD** | Jenkins / GitHub Actions | Automated build and execution pipeline |
-| **Reporting** | Cucumber HTML + Extent Reports | Rich test execution reports |
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**🙋 What this is**
+
+A Cucumber + Selenium suite with two halves:
+
+- 🛒 **[iScripts MultiCart demo](https://www.demo.iscripts.com/multicart/demo/index.php)** — a multi-vendor e-commerce shop: login (valid, invalid, blank fields), registration and duplicate-user rejection, forgot password, My Account options and footer links
+- 🧪 **Selenium techniques** — dynamic waits on pages served by an embedded **Jetty** server, JavaScript alerts, nested frames and iframes, multiple windows, and form authentication on [The Internet](https://the-internet.herokuapp.com/)
+
+Step classes share state through **Cucumber PicoContainer** dependency injection.
+
+> *Every scenario asserts what the user would actually see.*
+
+</td>
+<td width="50%" valign="top">
+
+**📍 Quick facts**
+
+| | |
+|---|---|
+| 🧪 **Scenarios** | 17 in 8 feature files |
+| ✅ **CI** | 17 / 17 · headless Chrome · ≈ 3.5 min |
+| 🌐 **Browsers** | Chrome (default), Firefox |
+| 🧩 **DI** | Cucumber PicoContainer |
+| 📸 **On failure** | Screenshot + page HTML |
+
+</td>
+</tr>
+</table>
+
+---
+
+## ✅ Latest Results
+
+| Feature | Scenarios | Covers | Result |
+|---|---:|---|---|
+| 🔐 `1_Login.feature` | 6 | Valid login, invalid ID, blank username / password, register-and-logout, forgot password | ![passed](https://img.shields.io/badge/-6%20passed-22c55e?style=flat-square) |
+| 📝 `2_CreateAccount.feature` | 2 | New account; same user registered twice → *"User Name already exists · email already in use"* | ![passed](https://img.shields.io/badge/-2%20passed-22c55e?style=flat-square) |
+| 👤 `3_Myaccount.feature` | 2 | My Account options (data table), footer *Get to know us* links | ![passed](https://img.shields.io/badge/-2%20passed-22c55e?style=flat-square) |
+| 🔑 `4_Theinternet.feature` | 3 | Form authentication: success, bad username, bad password | ![passed](https://img.shields.io/badge/-3%20passed-22c55e?style=flat-square) |
+| ⏳ `5_WaitTime.feature` | 1 | Four dynamically loaded elements on a local Jetty page | ![passed](https://img.shields.io/badge/-1%20passed-22c55e?style=flat-square) |
+| ⚠️ `6_AlertHandel.feature` | 1 | Accept a JavaScript alert and read the result | ![passed](https://img.shields.io/badge/-1%20passed-22c55e?style=flat-square) |
+| 🖼️ `7_Frame.feature` | 1 | Nested frames left / middle / right, then an iframe editor | ![passed](https://img.shields.io/badge/-1%20passed-22c55e?style=flat-square) |
+| 🪟 `8_WindowHandel.feature` | 1 | Open a new window, read it, switch back to the parent | ![passed](https://img.shields.io/badge/-1%20passed-22c55e?style=flat-square) |
+| **Total** | **17** | | **100 %** |
+
+<sub>GitHub Actions, Ubuntu, Temurin 17, headless Chrome ([workflow](.github/workflows/tests.yml)). The MultiCart and The Internet sites are public demos; registration creates a fresh, timestamped user on every run.</sub>
+
+---
+
+## 🏗️ Framework Architecture
+
+```mermaid
+flowchart LR
+  F["8 feature files"] --> R["RunCucumberTest<br/>JUnit runner"]
+  R --> S["Step classes<br/>Common · Validation · Domain ·<br/>Alert · Frame · Window · Wait"]
+  S --> H["A1StepCodeHelper<br/>(PicoContainer-injected)"]
+  H --> B["Browsers<br/>Chrome / Firefox, headless"]
+  H --> P["Page Objects<br/>HomePageMCT · RegistrationPage ·<br/>MyAccountPage · HomepageTheInternet"]
+  P --> PP["PageParent<br/>waits · stale retry · highlight"]
+  S --> J["SampleJettyServer<br/>localhost:8886"]
+  K["HookStepCode"] -.->|"screenshot + HTML on failure"| B
+```
+
+- **Dependency injection** — every step class receives the same `A1StepCodeHelper`, so one browser and one set of page objects is shared across steps without static state
+- **`PageParent`** — every click, typing action and read waits for the element (up to 20 s) and retries if the page re-renders it; elements are highlighted while the test runs
+- **Local test pages** — `SampleJettyServer` serves `Sample-Web/` on port 8886, so the wait exercises do not depend on the internet
+- **Selenium Manager** — Selenium 4 downloads the matching driver; no driver binaries are kept in the repository
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology | Version |
+|---|---|---|
+| Language | Java | 17 |
+| Browser automation | Selenium WebDriver (Selenium Manager) | 4.31.0 |
+| BDD | Cucumber JVM + PicoContainer | 6.11.0 |
+| Runner | JUnit 4 (`cucumber-junit`) | — |
+| Local web server | Eclipse Jetty | 9.2 |
+| Build | Maven (Surefire 3.2.5) | — |
+| Reporting | Cucumber HTML, screenshots and page HTML on failure | — |
+| CI | GitHub Actions | — |
 
 ---
 
@@ -40,475 +119,94 @@ A comprehensive **BDD test automation framework** for e-commerce multi-cart func
 
 ```
 Multicart_Demo_Automation/
-│
-├── src/main/java/
-│   └── com/automation/
-│       ├── pages/                     ← Page Object Model classes
-│       │   ├── HomePage.java
-│       │   ├── ProductPage.java
-│       │   ├── CartPage.java
-│       │   ├── CheckoutPage.java
-│       │   └── PaymentPage.java
-│       ├── utils/                     ← Utility and helper methods
-│       │   ├── DriverManager.java     ← Singleton WebDriver factory
-│       │   ├── WaitHelper.java        ← Explicit/implicit wait utilities
-│       │   └── ScreenshotUtil.java    ← Screenshot capture on failure
-│       └── config/
-│           └── ConfigReader.java      ← config.properties reader
-│
+├── .github/workflows/tests.yml          ← headless run on every push
+├── Sample-Web/                          ← pages served by the local Jetty server
 ├── src/test/java/
-│   └── com/automation/
-│       ├── steps/                     ← Cucumber step definition classes
-│       │   ├── CommonSteps.java
-│       │   ├── CartSteps.java
-│       │   ├── CheckoutSteps.java
-│       │   └── Hooks.java             ← @Before / @After lifecycle
-│       └── runners/
-│           └── TestRunner.java        ← TestNG + CucumberOptions runner
-│
-├── src/test/resources/
-│   ├── features/                      ← Gherkin BDD feature files
-│   │   ├── AddToCart.feature
-│   │   ├── RemoveFromCart.feature
-│   │   ├── CartCalculation.feature
-│   │   ├── CheckoutFlow.feature
-│   │   ├── PaymentWorkflow.feature
-│   │   ├── SmokeTests.feature
-│   │   └── RegressionTests.feature
-│   └── config/
-│       └── config.properties          ← URL, browser, timeout settings
-│
-├── reports/                           ← Generated reports and screenshots
-│   ├── cucumber-reports/
-│   │   └── report.html
-│   └── screenshots/
-│       └── FAILED_<ScenarioName>.png
-│
-├── pom.xml                            ← Maven dependencies and plugins
-├── testng.xml                         ← TestNG suite configuration
-├── Jenkinsfile                        ← CI/CD pipeline definition
-└── README.md
+│   ├── ARunner/RunCucumberTest.java     ← JUnit Cucumber runner
+│   ├── browserfactory/Browsers.java     ← Chrome / Firefox, headless switch
+│   ├── jettyserver/SampleJettyServer.java
+│   ├── pageobjectmodel/                 ← PageParent, HomePageMCT, RegistrationPage,
+│   │                                       MyAccountPage, HomepageTheInternet
+│   └── stepdefinationcode/              ← helper, hooks, common/validation/domain steps,
+│                                           alert, frame, window and wait steps
+├── src/test/resources/                  ← 1_Login … 8_WindowHandel.feature
+└── pom.xml
 ```
 
 ---
 
-## 🏗️ System Architecture
+## ⚙️ Getting Started
 
-```
-┌──────────────────────────────────────────┐
-│         UI Layer — Gherkin               │
-│     Feature Files & Step Definitions     │
-├──────────────────────────────────────────┤
-│      Page Object Model (POM)             │
-│    Reusable, encapsulated UI components  │
-├──────────────────────────────────────────┤
-│      Business Logic & Utilities          │
-│    WaitHelper · ConfigReader · Hooks     │
-├──────────────────────────────────────────┤
-│      WebDriver Layer                     │
-│    Selenium WebDriver — Browser Control  │
-├──────────────────────────────────────────┤
-│      Application Under Test              │
-│    Multi-cart E-commerce Demo System     │
-└──────────────────────────────────────────┘
-```
+**Prerequisites:** JDK 17+ · Maven 3.8+ · Google Chrome (or Firefox)
 
----
-
-## ✨ Framework Features
-
-| Feature | Description |
-|---------|-------------|
-| ✅ BDD with Cucumber | Gherkin scenarios readable by QA, developers, and business stakeholders |
-| ✅ Page Object Model | UI locators and actions isolated per page — single point of maintenance |
-| ✅ Singleton WebDriver | One browser instance per thread — consistent, stable test execution |
-| ✅ Screenshot on Failure | Auto-captured and saved to `reports/screenshots/` on any step failure |
-| ✅ Centralized Config | Zero hardcoded strings — all settings via `config.properties` |
-| ✅ Cross-Browser | Chrome, Firefox, and Edge supported |
-| ✅ Parallel Execution | TestNG `parallel="scenarios"` for faster feedback |
-| ✅ CI/CD Ready | Jenkins + GitHub Actions pipeline examples included |
-| ✅ Rich HTML Reports | Cucumber HTML report with step details and failure screenshots |
-
----
-
-## 🎯 Test Coverage
-
-### 🛒 Multi-Cart Functionality
-- Add single and multiple products to cart
-- Remove individual products from cart
-- Update product quantities
-- Cart item count badge validation
-- Cart persistence across navigation
-
-### 💰 Cart Calculations
-- Unit price validation per product
-- Subtotal calculation with multiple items
-- Tax and shipping calculation
-- Grand total accuracy verification
-
-### 💳 Checkout Process
-- Complete checkout with valid user details
-- Form validation — required fields, format errors
-- Order summary review and confirmation
-- Shipping address entry and validation
-
-### 💳 Payment Workflow
-- Payment method selection
-- Card details entry and validation
-- Order placement and confirmation
-- Order confirmation page verification
-
-### 🚀 Smoke Tests
-- Application launch and home page load
-- Product listing page display
-- Cart icon visibility and functionality
-- Navigation between key pages
-
-### 🔄 Regression Tests
-- End-to-end purchase with single product
-- End-to-end purchase with multiple products
-- Cart update and recalculation
-- Checkout with different user profiles
-
----
-
-## 🎨 Design Patterns Applied
-
-| Pattern | Where Used | Benefit |
-|---------|-----------|---------|
-| **Page Object Model** | All `pages/` classes | Encapsulates locators — one change fixes all tests |
-| **Singleton Pattern** | `DriverManager.java` | Single WebDriver instance per thread |
-| **Factory Pattern** | Browser initialization | Plug in Chrome, Firefox, or Edge via config |
-| **Builder Pattern** | Test data construction | Clean, readable test data setup |
-| **Facade Pattern** | `WaitHelper.java` | Simplified wait API hiding Selenium complexity |
-
----
-
-## ✅ Prerequisites
-
-- ✅ **Java 8 or higher** — configured in system PATH
-- ✅ **Maven 3.6+** — installed and configured
-- ✅ **Chrome / Firefox / Edge** — latest stable version
-- ✅ **ChromeDriver / GeckoDriver** — matching browser version
-- ✅ **IDE** — Eclipse or IntelliJ IDEA
-- ✅ **Git** — for version control
-
----
-
-## ⚙️ Installation & Setup
-
-**1. Clone the repository:**
 ```bash
-git clone https://github.com/ranajitchowdhury/Multicart_Demo_Automation.git
+git clone https://github.com/rbchy/Multicart_Demo_Automation.git
 cd Multicart_Demo_Automation
+
+mvn clean test                                   # all scenarios, visible browser
+mvn clean test -Dheadless=true                   # what CI runs
+mvn clean test -Dcucumber.filter.tags="@frame"   # one area (@wait, @alert, @frame, @multiWindow …)
 ```
 
-**2. Install all dependencies:**
-```bash
-mvn clean install -DskipTests
-```
-
-**3. Configure `src/test/resources/config/config.properties`:**
-```properties
-app.url=https://your-multicart-demo-url.com
-browser=chrome
-headless=false
-implicit.wait=10
-explicit.wait=20
-page.load.timeout=30
-```
+Report: `target/cucumber-reports.html` · failure pages: `target/failures/`.
 
 ---
 
-## ▶️ Running Tests
+## 🧹 Maintenance Log
 
-### Run full test suite
-```bash
-mvn clean test
-```
-
-### Run Smoke tests
-```bash
-mvn test -Dcucumber.filter.tags="@smoke"
-```
-
-### Run Regression tests
-```bash
-mvn test -Dcucumber.filter.tags="@regression"
-```
-
-### Run specific feature file
-```bash
-mvn test -Dcucumber.options="src/test/resources/features/CartCalculation.feature"
-```
-
-### Run with specific browser
-```bash
-mvn test -Dbrowser=firefox
-```
-
-### Run in headless mode (CI/CD)
-```bash
-mvn test -Dheadless=true
-```
-
-### Run with TestNG suite
-```bash
-mvn test -DsuiteXmlFile=testng.xml
-```
+| Change | Why |
+|---|---|
+| Removed `testFailureIgnore` from Surefire | Failing scenarios were reported as **BUILD SUCCESS** |
+| Compile for Java 17 | The pom targeted Java 8, but Selenium 4.31 requires Java 11+ |
+| `PageParent` now really waits and retries stale elements | Its `explicitWait()` body was commented out; clicks after login raced the page |
+| Invalid-login scenario asserts the error message | Its assertion was commented out, so it passed without checking anything |
+| Registration fills the site's new required **Address** field and creates a unique user | Every registration failed with *"Address cannot be empty"*; a fixed username could only ever register once |
+| Duplicate-user check registers a user, logs out and registers it again | It relied on `user008` existing on a shared demo that gets reset |
+| Logout uses the profile menu's `logout.php` link and waits for the login button | The menu had not opened yet when *Logout* was looked up |
+| Forgot Password expects the real message; footer list includes *Privacy Policy* | The expected text was the placeholder `"a error "`; the site added a link |
+| Footer-links step implemented | It was left as an exercise, so the scenario was undefined |
+| Removed macOS-only `chromedriver` / `geckodriver` (21 MB) and an empty placeholder feature | Selenium Manager supplies drivers on every OS |
+| Headless switch, page HTML on failure, GitHub Actions | Every push is checked |
 
 ---
 
-## 📊 Reports
+## 📈 Roadmap
 
-### Cucumber HTML Report
-Auto-generated after every run:
-```
-reports/cucumber-reports/report.html
-```
-
-Open in browser:
-```bash
-open reports/cucumber-reports/report.html
-```
-
-**Report includes:**
-- ✅ / ❌ Step-level pass/fail status
-- ⏱️ Execution time per scenario and step
-- 📸 Embedded failure screenshots
-- 🏷️ Feature and tag-based filtering
+- [x] Every scenario asserts real behaviour; GitHub Actions
+- [ ] Cart and checkout scenarios on the MultiCart shop
+- [ ] Firefox in a CI browser matrix
+- [ ] Migrate the JUnit runner to TestNG or the JUnit 5 Platform
 
 ---
 
-## 📸 Screenshot on Failure
+## 🔗 Related Projects
 
-```java
-// Hooks.java
-@After
-public void tearDown(Scenario scenario) {
-    if (scenario.isFailed()) {
-        // Capture full-page screenshot
-        byte[] screenshot = ((TakesScreenshot) DriverManager.getDriver())
-            .getScreenshotAs(OutputType.BYTES);
+| Project | Stack |
+|---|---|
+| 🛍️ [Sauce Demo Shop Automation](https://github.com/rbchy/Sauce-Demo.MyShopify.AutomationTest) | Selenium · Cucumber — CI green |
+| 🧪 [QA Brains — Java + Selenium](https://github.com/rbchy/QaBrainsAutomationJavaSelenium) | Selenium · Cucumber — CI green |
+| 👥 [OrangeHRM BDD Automation](https://github.com/rbchy/OrangeHRM_Automation) | Selenium · Cucumber · Extent — CI green |
+| ⭐ [RbcTcsWorld E-Commerce Suite](https://github.com/rbchy/RbcTcsWorld_ECommerceSuite) | Spring Boot · Selenium · Playwright · CI quality gates |
 
-        // Embed in Cucumber HTML report
-        scenario.attach(screenshot, "image/png", "FAILED_" + scenario.getName());
-
-        // Save to file system
-        String fileName = "reports/screenshots/FAILED_"
-            + scenario.getName().replaceAll("\\s+", "_") + ".png";
-        try {
-            FileUtils.writeByteArrayToFile(new File(fileName), screenshot);
-            System.out.println("📸 Screenshot saved: " + fileName);
-        } catch (IOException e) {
-            System.err.println("⚠ Screenshot save failed: " + e.getMessage());
-        }
-    }
-    DriverManager.quitDriver();
-}
-```
-
----
-
-## 🔄 Test Execution Flow
-
-```
-Feature Files (Gherkin)
-        ↓
-TestNG Runner (TestRunner.java)
-        ↓
-Step Definitions (steps/)
-        ↓
-Page Object Classes (pages/)
-        ↓
-DriverManager (Singleton WebDriver)
-        ↓
-Selenium WebDriver → Browser
-        ↓
-Multi-cart Application
-        ↓
-Cucumber HTML Report + Screenshots
-```
-
----
-
-## 🔧 CI/CD Integration
-
-### Jenkins Pipeline
-
-```groovy
-pipeline {
-    agent any
-
-    tools {
-        maven 'Maven 3.8'
-        jdk 'JDK 8'
-    }
-
-    stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/ranajitchowdhury/Multicart_Demo_Automation.git'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                sh 'mvn clean install -DskipTests'
-            }
-        }
-
-        stage('Run Smoke Tests') {
-            steps {
-                sh 'mvn test -Dheadless=true -Dcucumber.filter.tags="@smoke"'
-            }
-        }
-
-        stage('Run Regression Tests') {
-            steps {
-                sh 'mvn test -Dheadless=true -Dcucumber.filter.tags="@regression"'
-            }
-        }
-
-        stage('Publish Reports') {
-            steps {
-                cucumber buildStatus: 'UNSTABLE',
-                         fileIncludePattern: '**/cucumber.json',
-                         reportTitle: 'Multicart Demo Report'
-            }
-        }
-    }
-
-    post {
-        failure {
-            emailext(
-                subject: "❌ FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                body: "Tests failed. Report: ${env.BUILD_URL}cucumber-html-reports",
-                to: 'chyranajit@gmail.com'
-            )
-        }
-        success {
-            emailext(
-                subject: "✅ PASSED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                body: "All tests passed. Report: ${env.BUILD_URL}cucumber-html-reports",
-                to: 'chyranajit@gmail.com'
-            )
-        }
-    }
-}
-```
-
-### GitHub Actions
-
-```yaml
-name: Multicart Demo Automation
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up JDK 8
-        uses: actions/setup-java@v3
-        with:
-          java-version: '8'
-          distribution: 'temurin'
-
-      - name: Install dependencies
-        run: mvn clean install -DskipTests
-
-      - name: Run Tests
-        run: mvn test -Dheadless=true
-
-      - name: Upload Report
-        uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: cucumber-report
-          path: reports/cucumber-reports/
-
-      - name: Upload Screenshots
-        uses: actions/upload-artifact@v3
-        if: failure()
-        with:
-          name: failure-screenshots
-          path: reports/screenshots/
-```
-
----
-
-## 🏷️ Tags
-
-| Tag | Description |
-|-----|-------------|
-| `@smoke` | Critical path — fast build verification |
-| `@regression` | Full regression suite |
-| `@cart` | Cart add, remove, update scenarios |
-| `@checkout` | Checkout flow scenarios |
-| `@payment` | Payment workflow scenarios |
-| `@calculation` | Cart price and total calculation |
-
----
-
-## 📈 Future Enhancements
-
-- [ ] Docker containerization — isolated test environments
-- [ ] Parallel execution — TestNG `parallel="scenarios"` across browsers
-- [ ] BrowserStack / Sauce Labs — cloud cross-browser testing
-- [ ] REST Assured — API-layer validation alongside UI tests
-- [ ] Allure Reports — richer reporting with trend history
-- [ ] Database validation — JDBC assertions for order data integrity
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your branch: `git checkout -b feature/improvement`
-3. Write BDD scenarios in Gherkin and implement step definitions
-4. Run `mvn test` to verify no regressions
-5. Commit: `git commit -m 'Add improvement'`
-6. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is open-source under the **MIT License**.
-
----
-
-## 🌟 Why This Framework?
-
-| Strength | Detail |
-|----------|--------|
-| ✅ Clean architecture | POM + BDD + Hooks — industry-standard design |
-| ✅ Easy maintenance | Change one Page class, fix all related tests |
-| ✅ Readable scenarios | Business-friendly Gherkin test cases |
-| ✅ Self-documenting failures | Screenshots embedded in report |
-| ✅ Environment-agnostic | Config-driven — switch environments without code changes |
-| ✅ CI/CD compatible | Jenkins and GitHub Actions ready |
+<sub>All projects: [github.com/rbchy](https://github.com/rbchy)</sub>
 
 ---
 
 ## 👤 Author
 
-**Ranajit Baran Chowdhury**
-Software Programmer & QA Automation Engineer
-- 📧 Email: chyranajit@gmail.com
-- 📞 Phone: +1 (267) 342-5565
-- 🐙 GitHub: [@ranajitchowdhury](https://github.com/ranajitchowdhury)
-- 🌐 Portfolio: [rbc6543.wixsite.com/rbc-portfolio](https://rbc6543.wixsite.com/rbc-portfolio)
-- 💼 LinkedIn: [linkedin.com/in/ranajitchowdhury](https://linkedin.com/in/ranajitchowdhury)
+<div align="center">
 
----
+**Ranajit Baran Chowdhury (RB Chowdhury)**
+QA Automation Engineer / SDET · West Norriton, Pennsylvania, USA
 
-**Version:** 1.0.0 | **Last Updated:** May 2026
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rbchy/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rbchy)
+[![Website](https://img.shields.io/badge/Website-rbchy.github.io%2Frbchy-0d9488?style=for-the-badge&logo=githubpages&logoColor=white)](https://rbchy.github.io/rbchy/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Website-blueviolet?style=for-the-badge&logo=wix&logoColor=white)](https://rbc6543.wixsite.com/rbc-portfolio)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:chyranajit@gmail.com)
+
+<sub>For learning and portfolio purposes. The iScripts MultiCart demo and The Internet are public practice sites.</sub>
+
+⭐ *If this project helps you, a star on the repo is appreciated.*
+
+</div>
