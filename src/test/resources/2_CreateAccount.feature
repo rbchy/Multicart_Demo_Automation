@@ -18,4 +18,4 @@ Feature: Create Account Mechanism Test scearios
     And I click on login link
     And I click on signup button
     When I complete the registration form again for the same user
-    Then I expect existing reg error name text as "Please correct the following errors to continue!* User Name already exists!* The email address is already in use!"
+    Then I expect existing reg error name text as "Please correct the following errors to continue!* User Name already exists!* The email address is already in use!."
