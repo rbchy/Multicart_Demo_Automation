@@ -100,9 +100,13 @@ public class AllValidationSteps {
 
 	@Then("I expect an error text as {string}")
 	public void i_expect_error_text_as(String expectedErrorText) {
-		// String actualErrorText = homepage.getActualErrorText();
-		// Assert.assertEquals("Failed to Find Correct Profile Name!!", actualErrorText,
-		// expectedErrorText.toLowerCase());
+		String actualErrorText = new org.openqa.selenium.support.ui.WebDriverWait(helper.getBrowser().driver,
+				java.time.Duration.ofSeconds(20))
+				.until(org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated(
+						By.xpath("//div[contains(@class,'errormsg')]")))
+				.getText().replaceAll("\s+", " ").trim().toLowerCase();
+		Assert.assertEquals("Failed to find the invalid-login error!!",
+				expectedErrorText.toLowerCase().replaceAll("\s+", " ").trim(), actualErrorText);
 	}
 
 	@Then("I expect an error name text as {string}")
