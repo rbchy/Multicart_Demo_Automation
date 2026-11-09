@@ -59,4 +59,9 @@ public class RegistrationPage extends PageParent {
 		}
 		clickWebElement(registerButton);
 	}
+
+	/** Registers again with the user name and e-mail used last time (testUserName). */
+	public void completeRegistrationAgainForSameUser() {
+		completeREgistrationWithUser(testUserName);
+	}
 }

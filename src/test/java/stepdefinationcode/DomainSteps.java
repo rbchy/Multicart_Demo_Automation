@@ -21,4 +21,9 @@ public class DomainSteps {
 	}
 
 	
+
+	@When("I complete the registration form again for the same user")
+	public void i_complete_the_registration_form_again_for_the_same_user() {
+		helper.getRegistrationPage().completeRegistrationAgainForSameUser();
+	}
 }

@@ -21,76 +21,87 @@ public class PageParent {
 		driverforParentPage = driver;
 	}
 
+	////////// Shared wait + retry: the iScripts demo re-renders parts of the page after clicks /////////
+	private WebElement waitFor(By by, boolean clickable) {
+		WebDriverWait wait = new WebDriverWait(driverforParentPage, java.time.Duration.ofSeconds(20));
+		return wait.until(clickable ? ExpectedConditions.elementToBeClickable(by)
+				: ExpectedConditions.visibilityOfElementLocated(by));
+	}
+
+	private <T> T retryStale(java.util.function.Supplier<T> action) {
+		for (int attempt = 1; ; attempt++) {
+			try {
+				return action.get();
+			} catch (org.openqa.selenium.StaleElementReferenceException stale) {
+				if (attempt == 3) {
+					throw stale;
+				}
+				uglyWaitFor(1000);
+			}
+		}
+	}
+
+	private void click(By by) {
+		retryStale(() -> {
+			WebElement element = waitFor(by, true);
+			highlightElement(element, "pass");
+			element.click();
+			return null;
+		});
+	}
+
+	private void type(By by, String value) {
+		retryStale(() -> {
+			WebElement element = waitFor(by, false);
+			highlightElementBackground(element, "Pass");
+			element.sendKeys(value);
+			return null;
+		});
+	}
+
+	private String text(By by) {
+		return retryStale(() -> {
+			WebElement element = waitFor(by, false);
+			highlightElement(element, "Pass");
+			return element.getText().toLowerCase();
+		});
+	}
+
 	////////// Click Operation /////////
 	public void clickWebElement(String locators) {
-		WebElement element = driverforParentPage.findElement(By.id(locators));
-		highlightElement(element, "pass");
-		element.click();		
+		click(By.id(locators));
 	}
 
 	public void clickWebElementByName(String locators) {
-		
-		WebElement element = driverforParentPage.findElement(By.name(locators));		
-		highlightElement(element, "pass");
-		element.click();		
+		click(By.name(locators));
 	}
 
 	public void clickWebElementByXpath(String locators) {
-		WebElement element = driverforParentPage.findElement(By.xpath(locators));
-		
-		highlightElement(element, "pass");
-		element.click();		
+		click(By.xpath(locators));
 	}
 
-	
 	////////// Enter Operation /////////
-	
 	public void enterValueOnWebElement(String locators, String value) {
-		WebElement element = driverforParentPage.findElement(By.id(locators));
-		
-		highlightElementBackground(element, "Pass");
-		element.sendKeys(value);	
+		type(By.id(locators), value);
 	}
 
 	public void enterValueOnWebElementByname(String locators, String value) {
-		WebElement element = driverforParentPage.findElement(By.name(locators));
-		
-		highlightElementBackground(element, "Pass");
-		element.sendKeys(value);	
+		type(By.name(locators), value);
 	}
 
 	public void enterValueOnWebElementByxpath(String locators, String value) {
-		WebElement element = driverforParentPage.findElement(By.xpath(locators));
-		
-		highlightElementBackground(element, "Pass");
-		element.sendKeys(value);	
+		type(By.xpath(locators), value);
 	}
 
-	
-	
-	////////// Get TExt Operation /////////
-
+	////////// Get Text Operation /////////
 	public String getTextFromWebElement(String locators) {
-		WebElement element = driverforParentPage.findElement(By.id(locators));
-		
-		explicitWait(element); //// 
-
-		highlightElement(element, "Pass");
-		String result = element.getText().toLowerCase();
-		return result;
+		return text(By.id(locators));
 	}
 
 	public String getTextFromWebElementbyXpath(String locators) {
-
-		WebElement element = driverforParentPage.findElement(By.xpath(locators));
-		explicitWait(element);
-
-		highlightElement(element, "Pass");
-		String result = element.getText().toLowerCase();
-		return result;
+		return text(By.xpath(locators));
 	}
 
-	
 	public void framSwitchIn(String framName) {
 		driverforParentPage.switchTo().frame(framName);
 	}
@@ -164,8 +175,8 @@ public class PageParent {
 	
 	///////// Explicitly Wait for any Element you pass from the Method Call
 	public void explicitWait(WebElement ele ) {
-		//WebDriverWait wait = new WebDriverWait(driverforParentPage, 20);
-		//wait.until(ExpectedConditions.visibilityOf(ele));
+		new WebDriverWait(driverforParentPage, java.time.Duration.ofSeconds(20))
+				.until(ExpectedConditions.visibilityOf(ele));
 	}
 	
 	

@@ -34,6 +34,10 @@ jobs:
                           r'<(?:input|textarea|select)\b[^>]*>', r'<a\b[^>]*>(?:My Account|Logout|My Orders)[^<]*']:
                   for m in list(dict.fromkeys(re.findall(pat, s)))[:15]:
                       print('  ', re.sub(r'\s+', ' ', html.unescape(m))[:230])
+              i = s.find('id="dLabel"')
+              if i > 0:
+                  for m in re.findall(r'<a\b[^>]*>([^<]{1,40})</a>', s[i:i+3000]):
+                      print('  MENU', m.strip())
               if 'register.php' in s.splitlines()[0]:
                   i = s.find('txtFirstName')
                   form = s[max(0, i-4000):i+12000]

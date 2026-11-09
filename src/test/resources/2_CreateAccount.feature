@@ -12,5 +12,10 @@ Feature: Create Account Mechanism Test scearios
 
   Scenario: Error on Existing User Registration.
     And I click on signup button
-    When I complete the registration form for a new "user008"
+    And I complete the registration form for a new "generateNew"
+    And I expect my profile name text as "Mr Auto generateNew"
+    And I logout for the user
+    And I click on login link
+    And I click on signup button
+    When I complete the registration form again for the same user
     Then I expect existing reg error name text as "Please correct the following errors to continue!* User Name already exists!* The email address is already in use!"
