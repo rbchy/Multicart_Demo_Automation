@@ -36,8 +36,8 @@ jobs:
                       print('  ', re.sub(r'\s+', ' ', html.unescape(m))[:230])
               i = s.find('id="dLabel"')
               if i > 0:
-                  for m in re.findall(r'<a\b[^>]*>([^<]{1,40})</a>', s[i:i+3000]):
-                      print('  MENU', m.strip())
+                  for href, inner in re.findall(r'<a\b[^>]*href="([^"]*)"[^>]*>(.*?)</a>', s[i:i+4000], re.S):
+                      print('  MENU', href, '|', re.sub(r'<[^>]+>|\s+', ' ', inner).strip()[:60])
               if 'register.php' in s.splitlines()[0]:
                   i = s.find('txtFirstName')
                   form = s[max(0, i-4000):i+12000]
