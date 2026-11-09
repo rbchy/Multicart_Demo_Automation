@@ -86,13 +86,21 @@ public class HomePageMCT extends PageParent {
 	
 	
 	public void logOut() {
+		//// Open the profile dropdown, then use its logout.php link
 		clickWebElement(profileName);
-		
-		///clickWebElement(loginLink);
-
-		
-		driverforParentPage.findElement(By.linkText("Logout")).click();
-		
+		org.openqa.selenium.WebElement logout = new org.openqa.selenium.support.ui.WebDriverWait(
+				driverforParentPage, java.time.Duration.ofSeconds(20))
+				.until(org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated(
+						By.cssSelector("a[href$='logout.php']")));
+		if (logout.isDisplayed()) {
+			logout.click();
+		} else {
+			//// dropdown animation not finished: activate the link directly
+			((org.openqa.selenium.JavascriptExecutor) driverforParentPage).executeScript("arguments[0].click();", logout);
+		}
+		//// Logged out when the login button is back
+		new org.openqa.selenium.support.ui.WebDriverWait(driverforParentPage, java.time.Duration.ofSeconds(20))
+				.until(org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated(By.id(loginLink)));
 	}
 
 
