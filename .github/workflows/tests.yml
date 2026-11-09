@@ -35,12 +35,13 @@ jobs:
                   for m in list(dict.fromkeys(re.findall(pat, s)))[:15]:
                       print('  ', re.sub(r'\s+', ' ', html.unescape(m))[:230])
               if 'register.php' in s.splitlines()[0]:
-                  i = s.find('btnRegister')
-                  form = s[max(0, i-15000):i+300]
+                  i = s.find('txtFirstName')
+                  form = s[max(0, i-4000):i+12000]
                   for m in re.findall(r'<(?:input|textarea|select)\b[^>]*name="[^"]+"[^>]*>', form):
                       print('  FORM', re.sub(r'\s+', ' ', m)[:200])
-                  for m in re.findall(r'<label[^>]*>([^<]{1,60})', form):
-                      print('  LABEL', m.strip())
+                  for m in re.findall(r'>([^<>]{2,60})<', form):
+                      if m.strip():
+                          print('  TEXT', m.strip())
           EOF
 
       - name: Upload Cucumber report
