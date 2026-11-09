@@ -44,6 +44,7 @@ Feature: My Account Test scearios
       | Site Feedback      |
       | Terms & Conditions |
       | Contact Us         |
+      | Privacy Policy     |
       
     ### Xapth : //div[@class='col-xs-12 col-sm-6 col-md-3']//h1[contains(text(),'Get')]/..//a
     ### Xapth : //div[@class='col-xs-12 col-sm-6 col-md-3']//h1[contains(text(),'Shop with us')]/..//a
